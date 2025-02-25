@@ -63,7 +63,7 @@ jobs:
     permissions:
       contents: 'read'
       id-token: 'write'
-    needs:
+    # needs:
       # - integration-test # TODO remove; debug
     steps:
       # checkout code
