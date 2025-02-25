@@ -69,13 +69,13 @@ jobs:
       # checkout code
       - uses: actions/checkout@v4
 
-     # authenticate with GCP with workload identity provider
-     - uses: 'google-github-actions/auth@v2'
-       id: auth
-       name: Authenticate to GCP
-       with:
-         project_id: 'cc-homeworks' # update with your project ID
-         workload_identity_provider: 'projects/992844958753/locations/global/workloadIdentityPools/github/providers/my-repo' # update with your Workload Identity Pool
+      # authenticate with GCP with workload identity provider
+      - uses: 'google-github-actions/auth@v2'
+        id: auth
+        name: Authenticate to GCP
+        with:
+          project_id: 'cc-homeworks' # update with your project ID
+          workload_identity_provider: 'projects/992844958753/locations/global/workloadIdentityPools/github/providers/my-repo' # update with your Workload Identity Pool
 
 #      # configure/login with docker
 #      - name: gcloud Configure Docker
