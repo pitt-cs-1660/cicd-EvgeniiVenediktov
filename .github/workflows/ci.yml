@@ -51,7 +51,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
       - name: Docker compose up
-        run: docker compose up -d --wait --wait-timeout 300
+        run: docker compose up -d --wait
       - name: Integration tests
         run: |
           ./tests/api_tests.sh
@@ -75,6 +75,7 @@ jobs:
         name: Authenticate to GCP
         with:
           project_id: 'cc-homeworks' # update with your project ID
+          service_account: 'container-registry-writer@cc-homeworks.iam.gserviceaccount.com'
           workload_identity_provider: 'projects/992844958753/locations/global/workloadIdentityPools/github/providers/my-repo' # update with your Workload Identity Pool
 
       # configure/login with docker
