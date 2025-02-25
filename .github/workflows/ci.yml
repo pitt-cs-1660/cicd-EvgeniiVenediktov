@@ -75,8 +75,8 @@ jobs:
         name: Authenticate to GCP
         with:
           project_id: 'cc-homeworks' # update with your project ID
-          service_account: 'my-service-account@cc-homeworks.iam.gserviceaccount.com'
-          workload_identity_provider: 'projects/992844958753/locations/global/workloadIdentityPools/github-actions/providers/cicd-evgeniivenediktov' # update with your Workload Identity Pool
+          # service_account: 'my-service-account@cc-homeworks.iam.gserviceaccount.com'
+          workload_identity_provider: 'projects/992844958753/locations/global/workloadIdentityPools/github-pool/providers/cicd-repo' # update with your Workload Identity Pool
       # configure/login with docker
       - name: gcloud Configure Docker
         run: gcloud auth configure-docker us-east1-docker.pkg.dev
