@@ -77,12 +77,12 @@ jobs:
           project_id: 'cc-homeworks' # update with your project ID
           service_account: 'container-registry-writer@cc-homeworks.iam.gserviceaccount.com'
           workload_identity_provider: 'projects/992844958753/locations/global/workloadIdentityPools/github/providers/my-repo' # update with your Workload Identity Pool
-        run: gcloud auth list
-        
       # configure/login with docker
       - name: gcloud Configure Docker
         run: gcloud auth configure-docker us-east1-docker.pkg.dev
-
+      # show account name
+      - name: gcloud auth list
+        run: gcloud auth list
       # setup docker buildx
       - name: Setup docker buildx
         uses: docker/setup-buildx-action@v3
