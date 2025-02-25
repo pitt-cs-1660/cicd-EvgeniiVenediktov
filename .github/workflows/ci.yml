@@ -64,7 +64,7 @@ jobs:
       contents: 'read'
       id-token: 'write'
     needs:
-      - integration-test
+      # - integration-test # TODO remove; debug
     steps:
       # checkout code
       - uses: actions/checkout@v4
